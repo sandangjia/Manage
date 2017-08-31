@@ -2,7 +2,20 @@
  * Created by Luo on 2017/8/30.
  */
 //主模块
-angular.module('app',['ngRoute','aside','header','index','login'])
+angular.module('app',[
+    //第三方模块
+    'ngRoute',
+    //自己的组件
+    'aside',
+    'header',
+    'index',
+    'login',
+    //自己的业务逻辑服务
+    'http',
+    'api',
+    //自己的公共配置服务
+    'web_api'
+])
     .config(['$routeProvider',function($routeProvider){
         $routeProvider
         .when('/',{
